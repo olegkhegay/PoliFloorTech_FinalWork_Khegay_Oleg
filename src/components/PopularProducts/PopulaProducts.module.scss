@@ -1,0 +1,42 @@
+.popular_products{
+    padding: 50px 0 100px 0;
+}
+.wrap{
+    padding: 50px;
+    background: #8a8a8ab2;
+    border-radius: 30px;
+    max-height: 880px;
+
+    @media (max-width: 500px) {
+        padding: 10px;
+    }
+}
+
+.none{
+    max-width: 530px;
+    width: 100%;
+}
+
+h1{
+    font-size: clamp(1.5rem, 0.955rem + 2.73vw, 3rem);
+    font-weight: 700;
+    color: #F6F4E6;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 50px 0 50px 0;
+    gap: 50px;
+    text-align: center;
+
+
+    p{
+        font-size: clamp(1.125rem, 0.921rem + 1.02vw, 1.75rem);
+        font-weight: 400;
+        color: #b6b6b6;
+    }
+}

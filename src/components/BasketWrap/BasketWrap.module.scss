@@ -1,0 +1,144 @@
+.basket {
+  display: flex;
+  background-color: #52575D;
+  gap: 50px;
+  height: 120dvh;
+}
+
+.wrap__basket {
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 1px solid #C8CBD9;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
+  gap: 3px;
+
+  .search{
+    max-width: 250px !important;
+    width: 100% !important;
+
+  }
+}
+
+.profile__mobile {
+  color: #41444b;
+  padding: 12px 20px;
+  background-color: #fddb3a;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #caa500;
+  }
+
+  @media (max-width:400px) {
+    padding: 6px 8px;
+  }
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 40px;
+    height: 70dvh;
+
+    @media (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.box{
+    background-color: #F6F4E6;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    height: 70dvh;
+
+    .delete{
+        font-size: 16px;
+        background-color: transparent;
+        border: 1px solid #41444B;
+        color: #41444B;
+        font-weight: 700;
+        padding: 12px 40px;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover{
+            background-color: #41444B;
+            color: #F6F4E6;
+        }
+    }
+}
+
+.title{
+    
+
+    h2{
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    h3{
+        font-weight: normal;
+        font-size: 16px;
+    }
+}
+
+.count{
+    height: max-content;
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-around;
+    border-radius: 15px;
+
+    h2{
+        font-size: 20px;
+        font-weight: 500px;
+    }
+
+    h3{
+        font-size: 12px;
+        font-weight: 400;
+        color: #959697;
+    }
+
+    .pay{
+        color: #F6F4E6;
+        background-color: #FDDB3A;
+        padding: 13px 26px;
+        font-size: 16px;
+        font-weight: 700;
+        border: none;
+        transition: 0.3s;
+        border-radius: 15px;
+
+        &:hover{
+            background-color: #F6F4E6;
+            color: #FDDB3A;
+        }
+
+    }
+}

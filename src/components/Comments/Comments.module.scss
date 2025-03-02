@@ -1,0 +1,186 @@
+.commentsContainer {
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  @media (max-width: 1000px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.title {
+  margin-bottom: 30px;
+
+  
+
+  h2 {
+    color: #f6f4e6;
+    font-size: clamp(1.375rem, 0.92rem + 2.27vw, 2.625rem);
+    font-weight: 700;
+  }
+
+  h3 {
+    color: #959697;
+    font-size: clamp(1.125rem, 0.898rem + 1.14vw, 1.75rem);
+    font-weight: 400;
+  }
+}
+
+.openFormButton {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 20px;
+  background-color: #fddb3a;
+  border: none;
+  border-radius: 20px;
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.openFormButton:hover {
+  background-color: #caa500;
+}
+
+.commentForm {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.closeButton:hover {
+  color: #000;
+}
+
+.textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 1rem;
+}
+
+.ratingContainer {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  font-size: 1.8rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+  margin-right: 5px;
+}
+
+.star.selected,
+.star.hovered {
+  color: #fddb3a;
+}
+
+.submitButton {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #fddb3a;
+  border: none;
+  border-radius: 4px;
+  color: #41444b;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submitButton:hover {
+  background-color: #caa500;
+}
+
+/* Карточка комментария */
+.commentCard {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  max-width: 344px;
+  cursor: pointer;
+}
+
+/* Контейнер для рейтинга (звёзд) */
+.commentRating {
+  margin-bottom: 10px;
+}
+
+/* Контейнер для текста комментария */
+.commentText {
+  margin-top: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+/* Кнопка для удаления комментария */
+.deleteButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  transition: background-color 0.2s;
+}
+
+.deleteButton:hover {
+  background-color: #cc0000;
+}
+
+.swiperContainer {
+  padding: 20px 0;
+}
+
+.textarea {
+  max-width: 1100px;
+}
+
+.swiperContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}

@@ -1,0 +1,51 @@
+.searchContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #3a3a3a;
+    border-radius: 50px;
+    transition: width 0.3s ease-in-out;
+    width: 50px; /* Начальная ширина */
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  
+  .searchButton {
+    background: #3a3a3a;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+    z-index: 2;
+  }
+  
+  .searchButton:hover {
+    background: #2a2a2a;
+  }
+  
+  .input {
+    background: #3a3a3a; /* Возвращаем задний фон */
+    border: none;
+    color: white;
+    outline: none;
+    opacity: 0;
+    width: 0;
+    padding: 5px 10px;
+    padding-left: 160px;
+    transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    text-align: left;
+    position: absolute;
+    right: 50px;
+    border-radius: 25px;
+    height: 35px;
+    white-space: nowrap; /* Запрещает перенос текста */
+    overflow: hidden;
+
+    @media (max-width:920px) {
+        padding-left: 60px;
+    }
+  }
+  

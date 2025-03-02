@@ -1,0 +1,162 @@
+.card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  background-color: #41444B;
+  border-radius: 20px;
+  border: 5px solid #D4BE54;
+  gap: 15px;
+  position: relative;
+  max-width: 290px;
+
+  @media (max-width: 420px) {
+    border: 5px solid #D4BE54;
+  }
+
+  .main__img {
+    max-width: 250px;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  h3 {
+    color: #F6F4E6;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  p {
+    color: #959697;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+
+  @media (max-width: 520px) {
+    gap: 10px;
+  }
+  
+  .like {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  
+    svg {
+      max-width: 40px;
+      width: 100%;
+      height: auto;
+    }
+  
+    img {
+      max-width: 20px;
+      width: 100%;
+    }
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  
+    /* Дополнительный класс для состояния "лайкнуто" */
+    .liked {
+      color: #FDDB3A;
+    }
+  
+  }
+}
+
+.buy {
+  background-color: #FDDB3A;
+  border: 1px solid #D4BE54;
+  border-radius: 50%;
+  max-width: 35px;
+  max-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 5px;
+
+  img {
+    max-width: 20px;
+    width: 100%;
+  }
+
+
+
+  &:hover {
+    background-color: #b9992f;
+  }
+}
+
+.detail {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 5px 28px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+
+  &:hover {
+    background-color: #fff;
+    color: black;
+  }
+
+  @media (max-width: 1100px) {
+    padding: 8px 24px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  @media (max-width: 440px) {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  
+}
+
+.limited__text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  max-height: 3em;
+
+  @media (max-width:440px) {
+    font-size: 12px;
+  }
+}
+

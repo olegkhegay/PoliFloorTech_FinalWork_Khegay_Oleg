@@ -1,0 +1,61 @@
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(49, 49, 49, 0.438); /* Прозрачный фон для всей страницы */
+}
+
+.wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: transparent;
+  overflow: hidden;
+}
+
+.frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    yellow 0deg,
+    yellow 120deg,
+    transparent 120deg,
+    transparent 360deg
+  );
+  mask: radial-gradient(closest-side, transparent 90%, black 100%);
+  -webkit-mask: radial-gradient(closest-side, transparent 90%, black 100%);
+  animation: spin 1.5s linear infinite;
+}
+
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,41 @@
+.wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding-top: 50px;
+    overflow: hidden;
+    gap: 50px;
+    
+
+    h1{
+        font-size: clamp(3rem, 1.818rem + 5.91vw, 6.25rem);
+        font-weight: 700;
+    }
+
+    p{
+        color: #959697;
+        font-size: clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem);
+        font-weight: 700;
+    }
+
+    img{
+        object-fit: contain;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    li{
+        color:  #959697;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+.products{
+    padding-bottom: 30px;
+
+    @media (max-width: 850px) {
+        padding-bottom: 20px;
+    }
+}
