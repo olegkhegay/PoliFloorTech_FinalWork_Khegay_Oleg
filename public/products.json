@@ -1,0 +1,86 @@
+[
+  {
+    "id": 137,
+    "name": "УльтраСил",
+    "image": "https://avatars.mds.yandex.net/i?id=5b80e14844fee9e680bb18de2cdce0b84daae785-5291270-images-thumbs&n=13",
+    "description": "Максимальная прочность, качество и долговечность",
+    "price": "7500 "
+  },
+  {
+    "id": 58,
+    "name": "ЧистПро",
+    "image": "https://avatars.mds.yandex.net/i?id=5b80e14844fee9e680bb18de2cdce0b84daae785-5291270-images-thumbs&n=13",
+    "description": "Высокоэффективное средство для глубокой очистки",
+    "price": "6800 "
+  },
+  {
+    "id": 244,
+    "name": "Доратек",
+    "image": "https://avatars.mds.yandex.net/i?id=5b80e14844fee9e680bb18de2cdce0b84daae785-5291270-images-thumbs&n=13",
+    "description": "Инновационный состав для защиты поверхностей",
+    "price": "9200 "
+  },
+  {
+    "id": 91,
+    "name": "АкваГрув",
+    "image": "https://avatars.mds.yandex.net/i?id=5b80e14844fee9e680bb18de2cdce0b84daae785-5291270-images-thumbs&n=13",
+    "description": "Водостойкая формула для надежной гидроизоляции",
+    "price": "5000 "
+  },
+  {
+    "id": 303,
+    "name": "ФлексГард",
+    "image": "https://avatars.mds.yandex.net/i?id=5b80e14844fee9e680bb18de2cdce0b84daae785-5291270-images-thumbs&n=13",
+    "description": "Гибкое и износостойкое покрытие для долгой службы",
+    "price": "8500 "
+  },
+  {
+    "id": 12,
+    "name": "БезопасПлюс",
+    "image": "https://avatars.mds.yandex.net/i?id=5b80e14844fee9e680bb18de2cdce0b84daae785-5291270-images-thumbs&n=13",
+    "description": "Безопасная защита от внешних воздействий",
+    "price": "6700 "
+  },
+  {
+    "id": 86,
+    "name": "ЭпоксинЩит",
+    "image": "https://avatars.mds.yandex.net/i?id=5b80e14844fee9e680bb18de2cdce0b84daae785-5291270-images-thumbs&n=13",
+    "description": "Эпоксидная основа для прочного сцепления",
+    "price": "9800 "
+  },
+  {
+    "id": 195,
+    "name": "Быстросух",
+    "image": "https://avatars.mds.yandex.net/i?id=5b80e14844fee9e680bb18de2cdce0b84daae785-5291270-images-thumbs&n=13",
+    "description": "Быстросохнущее решение для экономии времени",
+    "price": "5600 "
+  },
+  {
+    "id": 43,
+    "name": "ГладЛайн",
+    "image": "https://avatars.mds.yandex.net/i?id=5b80e14844fee9e680bb18de2cdce0b84daae785-5291270-images-thumbs&n=13",
+    "description": "Обеспечивает идеально гладкое финишное покрытие",
+    "price": "6300 "
+  },
+  {
+    "id": 127,
+    "name": "КаменьЛюкс",
+    "image": "https://avatars.mds.yandex.net/i?id=5b80e14844fee9e680bb18de2cdce0b84daae785-5291270-images-thumbs&n=13",
+    "description": "Эффект натурального камня и прочность в одном флаконе",
+    "price": "7100 "
+  },
+  {
+    "id": 349,
+    "name": "ХардКор",
+    "image": "https://avatars.mds.yandex.net/i?id=5b80e14844fee9e680bb18de2cdce0b84daae785-5291270-images-thumbs&n=13",
+    "description": "Экстремальная стойкость к механическим нагрузкам",
+    "price": "9400 "
+  },
+  {
+    "id": 99,
+    "name": "ЛюксГлянец",
+    "image": "https://avatars.mds.yandex.net/i?id=5b80e14844fee9e680bb18de2cdce0b84daae785-5291270-images-thumbs&n=13",
+    "description": "Глянцевое покрытие для роскошного внешнего вида",
+    "price": "5800 "
+  }
+]
