@@ -1,51 +1,91 @@
 .searchContainer {
-    display: flex;
-    align-items: center;
-    position: relative;
-    background: #3a3a3a;
-    border-radius: 50px;
-    transition: width 0.3s ease-in-out;
-    width: 50px; /* Начальная ширина */
-    justify-content: flex-end;
-    overflow: hidden;
-  }
-  
-  .searchButton {
-    background: #3a3a3a;
-    border-radius: 50%;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.2s ease-in-out;
-    z-index: 2;
-  }
-  
-  .searchButton:hover {
-    background: #2a2a2a;
-  }
-  
-  .input {
-    background: #3a3a3a; /* Возвращаем задний фон */
-    border: none;
-    color: white;
-    outline: none;
-    opacity: 0;
-    width: 0;
-    padding: 5px 10px;
-    padding-left: 160px;
-    transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    text-align: left;
-    position: absolute;
-    right: 50px;
-    border-radius: 25px;
-    height: 35px;
-    white-space: nowrap; /* Запрещает перенос текста */
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;        /* важно для абсолютного позиционирования дочерних элементов */
+  background: #3a3a3a;
+  border-radius: 50px;
+  transition: width 0.3s ease-in-out;
+  width: 50px;              /* Начальная ширина */
+  justify-content: flex-end;
+  /* overflow: hidden;  <-- Убираем, чтобы не обрезать выпадающий список */
 
-    @media (max-width:920px) {
-        padding-left: 60px;
-    }
+  @media (max-width:1158px) {
+    display: none;
   }
+}
+
+.searchButton {
+  background: #3a3a3a;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  z-index: 2;
+}
+
+
+.input {
+  background: #3a3a3a; 
+  border: none;
+  color: white;
+  outline: none;
+  opacity: 0;               /* изначально скрыто */
+  width: 0;                 /* изначальная ширина 0 */
+  padding: 5px 10px;      /* при необходимости уменьшите, чтобы текст не начинался слишком справа */
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  text-align: left;
+  position: absolute;
+  right: 50px;              /* отодвигаем от правого края иконки */
+  border-radius: 25px;
+  height: 35px;
+  white-space: nowrap; 
   
+  overflow: hidden;         /* это обычно не мешает списку, так как он будет рендериться отдельно */
+  
+  @media (max-width: 920px) {
+    padding-left: 60px;     /* адаптивно уменьшаем отступ */
+  }
+}
+
+/* 
+Пример стилей для выпадающего списка, 
+чтобы он был поверх и не обрезался:
+*/
+.searchButton:hover {
+  background: #2a2a2a;
+}
+
+
+.suggestions {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #000;    /* чёрный фон, как вы хотели */
+  border-radius: 5px;
+  border: 1px solid #444;
+  z-index: 10;       /* чтобы быть поверх всего остального */
+}
+
+.suggestions li {
+  padding: 8px 10px;
+  cursor: pointer;
+  color: #fff;
+  border-bottom: 1px solid #444;
+}
+
+.suggestions li:hover {
+  background: #222;
+}
+
+.suggestions li:last-child {
+  border-bottom: none;
+}

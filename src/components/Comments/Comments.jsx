@@ -1,3 +1,4 @@
+// Пример: Comments.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -7,7 +8,37 @@ import "swiper/css/pagination";
 import s from "./Comments.module.scss";
 
 function Comments() {
-  const initialComments = JSON.parse(localStorage.getItem("comments")) || [];
+  // 1. Создаём массив "дефолтных" комментариев:
+  const defaultComments = [
+    {
+      text: "Сделал наливные полы в производственном помещении, все идеально. Пол прочнее, устойчивее к химическим воздействиям и долговечный.",
+      rating: 5
+    },
+    {
+      text: "Заказывал инженерную доску для офиса, все прошло гладко. Подобрали оттенок, идеально вписывается в интерьер и выглядит очень стильно.",
+      rating: 5
+    },
+    {
+      text: "Выбрался ламинированный паркет, сотрудники помогли с выбором и дали советы. Укладка быстрая, результат — стильный и дорогой вид!",
+      rating: 5
+    },
+    {
+      text: "Отличная компания! Заказывал наливные полы для кухни и ванной, не подвели. Ровные полы, уборка после проекта. Рекомендую за качество и сервис!",
+      rating: 5
+    },
+    {
+      text: "Отличная компания! Заказывал наливные полы для кухни и ванной, не подвели. Ровные полы, уборка после проекта. Рекомендую за качество и сервис!",
+      rating: 5
+    }
+  ];
+
+  // 2. Считываем из localStorage, если там пусто — используем defaultComments:
+  const storedComments = JSON.parse(localStorage.getItem("comments"));
+  const initialComments = storedComments && storedComments.length
+    ? storedComments
+    : defaultComments;
+
+  // А дальше всё как у вас:
   const [comments, setComments] = useState(initialComments);
   const [commentText, setCommentText] = useState("");
   const [rating, setRating] = useState(0);
@@ -64,7 +95,6 @@ function Comments() {
       <div className={s.wrap}>
         <div className={s.title}>
           <h2>Что говорят наши клиенты</h2>
-
           <h3>
             Отзывы о качестве и надежности нашей продукции: реальные <br />
             мнения клиентов на популярные товары нашей компании, <br />
@@ -80,6 +110,7 @@ function Comments() {
           </button>
         )}
       </div>
+
       {showForm && (
         <form ref={formRef} className={s.commentForm} onSubmit={handleSubmit}>
           <button
@@ -116,21 +147,23 @@ function Comments() {
           </button>
         </form>
       )}
+
       {comments.length > 0 && (
         <div className={s.swiperContainer}>
           <Swiper
             spaceBetween={20}
-            slidesPerView={4}
+            slidesPerView={Math.min(comments.length, 4)}
             pagination={{ clickable: true }}
             autoplay={{ delay: 4000 }}
-            loop={true}
+            loop={comments.length > 4}
             speed={600}
+            watchOverflow={true}
             breakpoints={{
-              320: { slidesPerView: 1 },
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              320: { slidesPerView: Math.min(comments.length, 1) },
+              640: { slidesPerView: Math.min(comments.length, 2) },
+              1024: { slidesPerView: Math.min(comments.length, 3) },
             }}
-            modules={[ Pagination, Autoplay]} 
+            modules={[Pagination, Autoplay]}
           >
             {comments.map((item, index) => (
               <SwiperSlide key={index}>

@@ -8,6 +8,7 @@ import YellowButton from "../YellowButton/YellowButton";
 import Hero from "../Hero/Hero";
 import MainProducts from "../MainProducts/MainProducts";
 import PopularProducts from "../PopularProducts/PopularProducts";
+import SearchBar from "../SearchBar/SearchBar";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -112,12 +113,7 @@ const Header = () => {
         </header>
 
         <div className={s.main_search}>
-          <div className={s.search_container}>
-            <input type="text" placeholder="Поиск" className={s.search_input} />
-            <span className={s.search_icon}>
-              <img src="./Search.svg" alt="" />
-            </span>
-          </div>
+          <SearchBar/>
         </div>
 
         <Hero />

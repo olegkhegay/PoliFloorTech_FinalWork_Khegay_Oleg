@@ -31,7 +31,9 @@ const Hero = () => {
                         </div>
                     </div>
 
+                    
                     <img src="/Main.png" alt="Main" className={s.main_img} />
+                    
                 </div>
             </div>
         </secton>

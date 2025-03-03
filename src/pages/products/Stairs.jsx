@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import Category from "../../components/Category/Category";
 import s from "./All.module.scss";
+import Footer from "../../components/Footer/Footer";
 
 const Stairs = () => {
 
@@ -58,6 +59,7 @@ const Stairs = () => {
         </div>
       </section>
       <Category />
+      <Footer/>
     </>
   );
 };

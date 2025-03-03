@@ -91,12 +91,12 @@ const Header = () => {
 
               <div className={s.buttons}>
                 <AnimatedSearch />
-                <Link to={"basket"}>
+                <Link to={"/basket"}>
                   <button className={s.basket}>
                     <img src="/basket.svg" alt="basket" />
                   </button>
                 </Link>
-                <Link to={"profile"}>
+                <Link to={"/profile"}>
                   <button className={s.profile}>
                     <img src="/profileHeader.svg" alt="profileHeader" />
                   </button>
