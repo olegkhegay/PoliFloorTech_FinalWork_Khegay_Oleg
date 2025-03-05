@@ -22,10 +22,13 @@ import LaminateFlooring from "./pages/products/LaminateFlooring";
 import EngineeringModule from "./pages/products/EngineeringModule";
 import EngineeringChristmasTree from "./pages/products/EngineeringChristmasTree";
 import EngineeringBoard from "./pages/products/EngineeringBoard";
+import { CartContext, CartProvider } from "./context/CartContext";
+
 
 const App = () => {
   return (
     <>
+    <CartProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
@@ -49,6 +52,11 @@ const App = () => {
         <Route path="profile" element={<Profile />} />
         <Route path="selected-products" element={<SelectedProducts />} />
       </Routes>
+
+    </CartProvider>
+
+    
+    
     </>
   );
 };

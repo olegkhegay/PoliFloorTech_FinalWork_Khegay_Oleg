@@ -1,10 +1,10 @@
 import React from 'react'
 import s from './Yellow.module.scss'
 
-const YellowButton = ({ children }) => {
+const YellowButton = ({ children, onClick }) => {
   return (
     <>
-        <button className={s.button}>{children}</button>
+        <button onClick={onClick} className={s.button}>{children}</button>
     </>
   )
 }

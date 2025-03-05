@@ -131,8 +131,8 @@ const Header = () => {
                 <HashLink smooth to={"#mainHeader"}>
                   Главная
                 </HashLink>
-                <Link to={"profile"}>Личный <br /> Кабинет</Link>
-                <Link to={"basket"}>Корзина</Link>
+                <Link to={"/profile"}>Личный <br /> Кабинет</Link>
+                <Link to={"/basket"}>Корзина</Link>
                 <HashLink smooth to="mainProducts">
                   Услуги
                 </HashLink>
